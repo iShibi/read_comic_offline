@@ -1,4 +1,4 @@
-# make sure to download chromedriver.exe first and put that in the same directory where this file is.
+# make sure you download chromedriver.exe first and put that in the same directory where this file is.
 
 # importing required modules
 from selenium import webdriver
