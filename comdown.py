@@ -13,7 +13,7 @@ import patoolib
 import os
 
 path = r'path to the folder where you want to save the downloaded pages of the comic'
-# making an empty list 'files' which will contain the downloaded pages as elemesnts.
+# making an empty list 'files' which will contain the downloaded pages as elements.
 files = []
 # selenium will wait till the specified time limit before throwing an error if it does not find the element you are trying to get. Increase this if you have a slow internet connection.
 timeout = 15
