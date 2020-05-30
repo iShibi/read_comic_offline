@@ -14,4 +14,6 @@ Watch the video on Youtube:
 
 ## Installation
 
-[Chromedriver](https://chromedriver.chromium.org/downloads)
+[Chromedriver](https://chromedriver.chromium.org/downloads) for Chrome
+
+[Geckodriver](https://github.com/mozilla/geckodriver/releases) for Firefox
