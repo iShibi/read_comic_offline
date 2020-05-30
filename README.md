@@ -6,7 +6,7 @@
 <a href="https://github.com/shibi391/read_comic_offline/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/shibi391/read_comic_offline"></a>
 </div>
 
-A python program which downloads comics from readcomiconline website.
+A python program which downloads comics from ![readcomiconline](https://readcomiconline.to/) website.
 
 Watch the video
 
