@@ -6,7 +6,7 @@
 <a href="https://github.com/shibi391/read_comic_offline/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/shibi391/read_comic_offline"></a>
 </div>
 
-A python program which downloads comics from [readcomiconline](https://readcomiconline.to/)
+A python program which downloads comics from [readcomiconline](https://readcomiconline.to/).
 
 Watch the video on Youtube:
 
@@ -14,6 +14,6 @@ Watch the video on Youtube:
 
 ## Installation
 
-- [Chromedriver](https://chromedriver.chromium.org/downloads) for Chrome
+- [Chromedriver](https://chromedriver.chromium.org/downloads) for Chrome.
 
-- [Geckodriver](https://github.com/mozilla/geckodriver/releases) for Firefox
+- [Geckodriver](https://github.com/mozilla/geckodriver/releases) for Firefox.
