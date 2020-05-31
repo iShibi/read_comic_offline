@@ -16,8 +16,8 @@ Watch the video on Youtube:
 
 - [Chrome](https://www.google.com/intl/en/chrome/) browser.
 
-- [Chromedriver](https://chromedriver.chromium.org/downloads) for Chrome.
-
 - [Firefox](https://www.mozilla.org/en-US/firefox/new/) browser.
+
+- [Chromedriver](https://chromedriver.chromium.org/downloads) for Chrome.
 
 - [Geckodriver](https://github.com/mozilla/geckodriver/releases) for Firefox.
