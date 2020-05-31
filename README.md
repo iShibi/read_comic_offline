@@ -18,6 +18,6 @@ Watch the video on Youtube:
 
 - [Chromedriver](https://chromedriver.chromium.org/downloads) for Chrome.
 
--[Firefox](https://www.mozilla.org/en-US/firefox/new/) browser.
+- [Firefox](https://www.mozilla.org/en-US/firefox/new/) browser.
 
 - [Geckodriver](https://github.com/mozilla/geckodriver/releases) for Firefox.
