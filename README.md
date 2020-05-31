@@ -14,6 +14,10 @@ Watch the video on Youtube:
 
 ## Installation
 
+- [Chrome](https://www.google.com/intl/en/chrome/) browser.
+
 - [Chromedriver](https://chromedriver.chromium.org/downloads) for Chrome.
+
+-[Firefox](https://www.mozilla.org/en-US/firefox/new/) browser.
 
 - [Geckodriver](https://github.com/mozilla/geckodriver/releases) for Firefox.
