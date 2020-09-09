@@ -53,7 +53,7 @@ extensions_path = str(Path('extensions').resolve())
 
 browser = webdriver.Firefox(service_log_path=os.path.devnull, options=options, executable_path=GeckoDriverManager().install())
 browser.install_addon(extensions_path + r"\ublock_origin-1.29.2-an+fx.xpi")
-browser.install_addon(extensions_path + "\@easyimageblocker.xpi")
+browser.install_addon(extensions_path + r"\@easyimageblocker.xpi")
 
 
 # if comic_url == 'search':    
