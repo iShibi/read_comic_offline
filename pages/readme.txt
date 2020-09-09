@@ -1,0 +1,1 @@
+Comic pages will get moved into this folder if you choose to keep them.

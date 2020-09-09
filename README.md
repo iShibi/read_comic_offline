@@ -14,10 +14,9 @@ Watch the video on Youtube:
 
 ## Installation
 
-- [Chrome](https://www.google.com/intl/en/chrome/) browser.
-
 - [Firefox](https://www.mozilla.org/en-US/firefox/new/) browser.
 
-- [Chromedriver](https://chromedriver.chromium.org/downloads) for Chrome.
+## Setup
 
-- [Geckodriver](https://github.com/mozilla/geckodriver/releases) for Firefox.
+To install all the necessary dependencies run the following cmd in the terminal:
+    pip install -r requirements.txt
