@@ -20,22 +20,16 @@ Watch the video on Youtube:
 
 To install all the necessary dependencies run the following cmd in the terminal:
 ```
-
 pip install -r requirements.txt
-
 ```
 
 ## Documentation
 
 After installing firefox browser and all the neccessary packages, run the following cmd in the terminal to start the program:
 ```
-
 python main.py
-
 ```
 For help regarding the command line arguments and program inputs, run the following cmd in the terminal:
 ```
-
 python main.py -h
-
 ```

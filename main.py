@@ -69,6 +69,7 @@ if args.url:
     comic_url = args.url
 else:
     comic_url = input('Paste the url of the comic: ')
+
 # comic_url = input("Paste the url of the comic (Enter 'search' to open search mode): ")
 
 # if comic_url == 'search':
@@ -191,12 +192,15 @@ for r, d, f in os.walk(path):
 print("Converting images into cbr format...")
 images = tuple(img_files)
 
-# if comic_url == 'search':
-#     patoolib.create_archive(f"{path}\\" + f"#{issue_number}.cbr", images, verbosity=-1)
-# else:
-#     patoolib.create_archive(f"{path}\\" + "comic.cbr", images, verbosity=-1)
 
-patoolib.create_archive(f"{path}\\" + "comic.cbr", images, verbosity=-1)
+
+comic_meta_data_arr = comic_url.split('/')
+comic_name = comic_meta_data_arr[4]
+issue_number = (comic_meta_data_arr[5].split('?'))[0]
+
+
+
+patoolib.create_archive(f"{path}\\" + f"{comic_name} {issue_number}.cbr", images, verbosity=-1)
 
 os.remove('img_urls_file.json')
 
@@ -207,7 +211,9 @@ if delete_image == 'yes':
 else:
     print(f"Moving downloaded images to pages folder...")
     pages_folder_path = str(Path('pages').resolve())
+    new_pages_folder_path = pages_folder_path + f'\\{comic_name} {issue_number}'
+    os.mkdir(new_pages_folder_path)
     for f in img_files:
-        shutil.move(f, pages_folder_path)
+        shutil.move(f, new_pages_folder_path)
 
 print("Download Complete")
