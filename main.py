@@ -17,13 +17,58 @@ from pathlib import Path
 import threading
 import patoolib
 import shutil
+import argparse
 
-os.system('cls')
 
-browser_mode = input('Choose browser mode (head/headless): ')
-quality_set = input('Choose quality of the comic (high/low): ')
-delete_image = input('Do you want to delete images after they get converted to cbr (yes/no): ')
-comic_url = input('Paste the url of the comic: ')
+parser = argparse.ArgumentParser()
+quality_group = parser.add_mutually_exclusive_group()
+quality_group.add_argument('-hq', '--highquality', help='sets the quality option to high', action='store_true')
+quality_group.add_argument('-lq', '--lowquality', help='sets the quality option to low', action='store_true')
+
+browser_mode_group = parser.add_mutually_exclusive_group()
+browser_mode_group.add_argument('-hd', '--head', help='opens the browser in head mode', action='store_true')
+browser_mode_group.add_argument('-hl', '--headless', help='opens the browser in headless mode', action='store_true')
+
+image_destiny_group = parser.add_mutually_exclusive_group()
+image_destiny_group.add_argument('-k', '--keep', help='keeps the downloaded images', action='store_true')
+image_destiny_group.add_argument('-d', '--delete', help='deletes the downloaded images', action='store_true')
+
+parser.add_argument('-url', help='Paste the url of the comic you want after this argument')
+
+
+args = parser.parse_args()
+
+
+# Browser Mode Input
+if args.head:
+    browser_mode = 'head'
+elif args.headless:
+    browser_mode = 'headless'
+else:
+    browser_mode = input('Choose browser mode (head/headless): ')
+
+# Comic Quality Input
+if args.highquality:
+    quality_set = 'high'
+elif args.lowquality:
+    quality_set = 'low'
+else:
+    quality_set = input('Choose quality of the comic (high/low): ')
+
+
+# Image Destiny Input 
+if args.keep:
+    delete_image = 'no'
+elif args.delete:
+    delete_image = 'yes'
+else:
+    delete_image = input('Do you want to delete images after they get converted to cbr (yes/no): ')
+
+# Comic Url Input
+if args.url:
+    comic_url = args.url
+else:
+    comic_url = input('Paste the url of the comic: ')
 # comic_url = input("Paste the url of the comic (Enter 'search' to open search mode): ")
 
 # if comic_url == 'search':
