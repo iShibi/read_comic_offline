@@ -8,9 +8,11 @@
 
 A python program which downloads comics from [readcomiconline](https://readcomiconline.to/).
 
-Watch the video on Youtube:
+## Demo:
 
-[![Comic Downloader](https://img.youtube.com/vi/nT8DdCQtKao/0.jpg)](https://www.youtube.com/watch?v=nT8DdCQtKao)
+<p align="center">
+    <img alt="read_comic_offline gif demo" src="https://i.imgur.com/GwXJolC.gif">
+</p>
 
 ## Installation
 
