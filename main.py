@@ -12,12 +12,12 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import Select
-import urllib.request
 from pathlib import Path
 import threading
 import patoolib
 import shutil
 import argparse
+import requests
 
 
 parser = argparse.ArgumentParser()
@@ -162,12 +162,14 @@ browser.quit()
 
 
 thread_list = []
-path = str(Path(r'downloads').resolve())
+path = str(Path('downloads').resolve())
 img_files = []
 
-def download_img(json_img_object, img):
+def download_img(json_img_object, img, path):
     img_link = json_img_object.get(f'{img}')
-    urllib.request.urlretrieve(img_link, f'{path}' + f'\\{img}.jpg')
+    r = requests.get(img_link, allow_redirects=True)
+    file_name = f'{path}' + f'\\{img}.jpg'
+    open(file_name, 'wb').write(r.content)
 
 
 with open('img_urls_file.json', 'r') as images:
@@ -177,7 +179,7 @@ img_count = int(json_img_object.get('count'))
 
 print("Downloading comic pages...")
 for img in range(1, img_count):
-    thread = threading.Thread(target=download_img, args=[json_img_object, img])
+    thread = threading.Thread(target=download_img, args=[json_img_object, img, path])
     thread.start()
     thread_list.append(thread)
 
