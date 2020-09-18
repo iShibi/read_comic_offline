@@ -11,7 +11,7 @@ A python program which downloads comics from [readcomiconline](https://readcomic
 ## Demo:
 
 <p align="center">
-    <img alt="gif demo" src="https://media.giphy.com/media/qWiIpQkowNAyhQ4i3C/giphy.gif" width="889" height="500">
+    <img alt="gif demo" src="https://github.com/shibi391/storage/blob/master/gifs/read_comic_offline_demo.gif" width="889" height="500">
 </p>
 
 ## Installation
