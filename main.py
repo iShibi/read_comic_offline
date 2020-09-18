@@ -167,9 +167,12 @@ img_files = []
 
 def download_img(json_img_object, img, path):
     img_link = json_img_object.get(f'{img}')
-    r = requests.get(img_link, allow_redirects=True)
+    r = requests.get(img_link, stream = True)
     file_name = f'{path}' + f'\\{img}.jpg'
-    open(file_name, 'wb').write(r.content)
+    with open(file_name, 'wb') as image:
+        for chunk in r.iter_content(chunk_size=1024):
+            if chunk:
+                image.write(chunk)
 
 
 with open('img_urls_file.json', 'r') as images:
